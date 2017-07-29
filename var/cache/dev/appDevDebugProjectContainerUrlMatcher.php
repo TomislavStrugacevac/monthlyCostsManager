@@ -108,6 +108,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // form_entry
+        if ('/form' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\FormController::formAddAction',  '_route' => 'form_entry',);
+        }
+
         // homepage_index
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {

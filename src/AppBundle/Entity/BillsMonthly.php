@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Entitiy;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -17,7 +17,7 @@ class BillsMonthy {
 	 */
 	protected $id;
 	public function getId() {
-		$return $this->id;
+		return $this->id;
 	}
 
 	/**
@@ -32,7 +32,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $electricity;
 	public function getElectricity(){
@@ -43,18 +43,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
-	 */
-	protected $gas;
-	public function getGas(){
-		return $this->gas;
-	}
-	public function setGas($gas){
-		$this->gas = $gas;
-	}
-
-	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $water;
 	public function getWater(){
@@ -65,7 +54,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $garbage;
 	public function getGarbage(){
@@ -76,7 +65,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $publicUtility;
 	public function getPublicUtility(){
@@ -87,10 +76,10 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $telecommunications;
-	public function getTelecommuncations{
+	public function getTelecommuncations(){
 		return $this->telecommunications;
 	}
 	public function setTelecommunications($telecommunications){
@@ -98,7 +87,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $healthInsurance;
 	public function getHealthInsurance(){
@@ -109,7 +98,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $maintenanceFees;
 	public function getMaintenanceFees(){
@@ -121,7 +110,7 @@ class BillsMonthy {
 
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $stateTv;
 	public function getStateTv(){
@@ -132,18 +121,18 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $gas;
-	public function getGas(){
+	public function getgas(){
 		return $this->gas;
 	}
-	public function setGas($gas){
+	public function setgas($gas){
 		$this->gas = $gas;
 	}
-
+	
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $shopping;
 	public function getShopping(){
@@ -154,7 +143,7 @@ class BillsMonthy {
 	}
 
 	/**
-	 * @ORM\Column(type="decimal", scale="2")
+	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $other;
 	public function getOther(){
