@@ -1,5 +1,35 @@
 {% extends 'base.html.twig' %}
 
+{% block title %} Entry Form {% endblock %}
+
 {% block body %}
-    <h1>Index page</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered report">
+        	    
+            {% for colName in colNames %}
+        		<th>{{ colName|upper|replace({'_':' '}) }}</th>
+        	{% endfor %}
+                <th>OBRIŠ6I</th>	
+        	{% for result in results %}
+        		<tr>
+                    <td>{{ result.id }}</td>
+        			<td>{{ result.date.date|date("m/Y") }}</td>
+        			<td>{{ result.electricity }}</td>
+        			<td>{{ result.water }}</td>
+        			<td>{{ result.garbage }}</td>
+        			<td>{{ result.publicUtility}}</td>
+        			<td>{{ result.telecommunications }}</td>
+        			<td>{{ result.healthInsurance }}</td>
+        			<td>{{ result.maintenanceFees }}</td>
+        			<td>{{ result.stateTv }}</td>
+        			<td>{{ result.gas }}</td>
+        			<td>{{ result.shopping }}</td>
+        			<td>{{ result.other }}</td>
+                    <td>(X)</td>
+        		</tr>
+        	{% endfor %}
+        </table>
+	</div>
 {% endblock %}
+
+

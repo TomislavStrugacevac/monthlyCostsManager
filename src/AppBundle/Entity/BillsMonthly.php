@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 * @ORM\Entity 
 * @ORM\Table(name="bills")
 */
-class BillsMonthy {
+class BillsMonthly {
 
 	/**
 	 * @ORM\Column(type="integer")
@@ -21,7 +21,7 @@ class BillsMonthy {
 	}
 
 	/**
-	* @ORM\Column(type="date") 
+	* @ORM\Column(type="date", unique=true) 
 	*/
 	protected $date;
 	public function getDate(){
@@ -58,7 +58,7 @@ class BillsMonthy {
 	 */
 	protected $garbage;
 	public function getGarbage(){
-		return $this->garabage;
+		return $this->garbage;
 	}
 	public function setGarbage($garbage){
 		$this->garbage = $garbage;
@@ -79,7 +79,7 @@ class BillsMonthy {
 	 * @ORM\Column(type="decimal", scale=2)
 	 */
 	protected $telecommunications;
-	public function getTelecommuncations(){
+	public function getTelecommunications(){
 		return $this->telecommunications;
 	}
 	public function setTelecommunications($telecommunications){
@@ -91,7 +91,7 @@ class BillsMonthy {
 	 */
 	protected $healthInsurance;
 	public function getHealthInsurance(){
-		$this->healthInsurance;
+		return $this->healthInsurance;
 	}
 	public function setHealthInsurance($healthInsurance){
 		$this->healthInsurance = $healthInsurance;

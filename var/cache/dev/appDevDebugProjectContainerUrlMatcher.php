@@ -108,9 +108,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // form_entry
-        if ('/form' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\FormController::formAddAction',  '_route' => 'form_entry',);
+        elseif (0 === strpos($pathinfo, '/form')) {
+            // form_entry
+            if ('/form' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\FormController::formExampleAction',  '_route' => 'form_entry',);
+            }
+
+            // form_find
+            if ('/form/all' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\FormController::formFindAction',  '_route' => 'form_find',);
+            }
+
         }
 
         // homepage_index
@@ -120,6 +128,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\IndexController::IndexController',  '_route' => 'homepage_index',);
+        }
+
+        // login
+        if ('/login' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\LoginController::loginAction',  '_route' => 'login',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

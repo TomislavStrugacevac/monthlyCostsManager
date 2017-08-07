@@ -1,4 +1,31 @@
 body {
-	background-color: #000000;
-	color: #ccff33;
+	background-color: #1C2F3A;
+	color: #7BC143;
+	
+}
+
+#formContainer {
+	background-color: #7BC143;
+	color: #1C2F3A;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#userData{
+	color: #a1ef77;
+}
+
+.report tbody th {
+	background-color: #7BC143;
+	color: #1C2F3A;
+}
+
+.report tbody td {
+	background-color: #F0F2F2;
+	color: #1C2F3A;
+	text-align: right;
+}
+
+tr:hover td{
+	background-color: #e6fce3;
 }
