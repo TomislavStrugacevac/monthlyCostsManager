@@ -2,19 +2,19 @@
 
 namespace AppBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM; 
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- *@ORM\Table(name="app_users") 
- *@ORM\Entity(repositoryClass="AppBundle\Respository\UserRepository")
+ *@ORM\Table(name="app_users")
+ *@ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
 
 class User implements UserInterface, \Serializable {
 	/**
 	 *@ORM\Column(type="integer")
 	 *@ORM\Id
-	 *@ORM\GenerateValue(strategy="AUTO")
+	 *@ORM\GeneratedValue(strategy="AUTO")
 	 */
 	private $id;
 
@@ -24,7 +24,7 @@ class User implements UserInterface, \Serializable {
 	private $username;
 
 	/**
-	 * @ORM\Column(type="string", lenght=64)
+	 * @ORM\Column(type="string", length=64)
 	 */
 	private $password;
 
@@ -102,13 +102,17 @@ class User implements UserInterface, \Serializable {
 	/**
 	 * @see \Serializable::serialize()
 	 */
-	public function unserialize(){
+	public function unserialize($serialized){
 		list (
 			$this->id,
 			$this->username,
 			$this->password,
-		) = unserialize($serialized)
+		) = unserialize($serialized);
 	}
+
+	public function eraseCredentials() {
+			//empty
+	 }
 
 
 

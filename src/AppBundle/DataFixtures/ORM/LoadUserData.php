@@ -32,6 +32,6 @@ class LoadUserData implements FixtureInterface, ContainerAwareInterface {
     public function setContainer (ContainerInterface $container = null) {
     		$this->container = $container;
     }
-//27:59
+
 
 }

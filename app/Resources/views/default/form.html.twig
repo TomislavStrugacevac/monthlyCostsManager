@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="userData">
 			<h4>User:</h4>
-			<p>Tomislav Strugačevac</p>
+			<p>{{ app.user.username }}</p>
 			<br>
 			<br>
 			<h4>Lokacija:</h4>
@@ -14,7 +14,7 @@
 			<p></p>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" id="formContainer" name="form">
-			
+
 			{{ form_start(form) }}
 			{{ form_widget(form) }}
 			{{ form_end(form) }}
@@ -27,7 +27,7 @@
 					<br>
 					<h4><span class="total">0.00</span></h4>
 				</div>
-				
+
 
 				<div class="col-12" id="formContainer">
 					<h3>Pomoćni kalkulator:</h3>
@@ -39,7 +39,7 @@
 					<h4 class="form-control">1453,26</h4>
 					<h4>Ukupno:<h4 class="form-control">1453,26</h4></h4>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 
@@ -47,5 +47,5 @@
 {% endblock %}
 
 {% block javascripts %}
-    
+
 {% endblock %}

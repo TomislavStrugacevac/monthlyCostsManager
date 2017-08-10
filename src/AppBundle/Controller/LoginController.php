@@ -2,18 +2,18 @@
 
 namespace AppBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class SecurityController extends Controller {
+class LoginController extends Controller {
 
 	/**
 	 * @Route("/login", name="login")
 	 */
 
-	public function loginAction (Request $request, AuthenticationUtils $authUtils) {
+	public function loginAction (Request $reuest, AuthenticationUtils $authUtils) {
 
 		$error = $authUtils->getLastAuthenticationError();
 		$lastUsername = $authUtils->getLastUsername();
@@ -28,5 +28,3 @@ class SecurityController extends Controller {
 
 
 }
-
-/// http://symfony.com/doc/current/security/entity_provider.html
