@@ -12,6 +12,23 @@
     <body>
       <div class="container">
 
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="/form">Novi unos</a>
+                            <a class="nav-item nav-link" href="/form/all">Prikaži sve</a>
+                            <a class="nav-item nav-link" href="#">Pricing</a>
+                            <a class="nav-item nav-link disabled" href="/logout">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            {% endif %}
+
             {% block body %}{% endblock %}
             {% block javascripts %}{% endblock %}
             <!-- Jquery-->

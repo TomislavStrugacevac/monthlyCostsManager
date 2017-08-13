@@ -13,7 +13,7 @@ class LoginController extends Controller {
 	 * @Route("/login", name="login")
 	 */
 
-	public function loginAction (Request $reuest, AuthenticationUtils $authUtils) {
+	public function loginAction (Request $request, AuthenticationUtils $authUtils) {
 
 		$error = $authUtils->getLastAuthenticationError();
 		$lastUsername = $authUtils->getLastUsername();
@@ -25,6 +25,13 @@ class LoginController extends Controller {
 			));
 
 	}
+
+    /**
+     * @Route("/logout", name="logout")
+     */
+	public function logoutAction(){
+        return $this->render("login/logout.html.twig");
+    }
 
 
 }
